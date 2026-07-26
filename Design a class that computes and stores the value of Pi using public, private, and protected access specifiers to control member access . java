@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class PiValue {
+
+    // Private variable
+    private double pi = 3.14159;
+
+    // Protected method
+    protected double calculateArea(double radius) {
+        return pi * radius * radius;
+    }
+
+    // Public method
+    public void display(double radius) {
+        System.out.println("Value of Pi = " + pi);
+        System.out.println("Area of Circle = " + calculateArea(radius));
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Radius: ");
+        double radius = sc.nextDouble();
+
+        PiValue obj = new PiValue();
+        obj.display(radius);
+
+        sc.close();
+    }
+}
